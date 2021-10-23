@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memotest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    
+    <style>
+    
+    :root {
+    --w: calc(70vw / 6);
+    --h: calc(70vh / 4);
+}
+
+* {
+    transition: all 0.5s;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-perspective: 1000;
+    background: powderblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    display: inline-block;
+}
+
+.area-tarjeta, .tarjeta, .cara {
+    width: var(--w);
+    min-width: 100px;
+    height: var(--h);
+}
+
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.area-tarjeta:hover .card{
+    transform: rotateY(180deg);
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 0 5px white;
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trasera {
+    background-color: lightcyan;
+    transform: rotateY(180deg);
+}
+
+.superior {
+    background: linear-gradient(orange, darkorange);
+}
+
+.nuevo-juego {
+    background: linear-gradient(orange, darkorange);
+    padding: 20px;
+    border-radius: 50px;
+    border: white 5px solid;
+}
+        
+    </style>
+    
+    <div id="tablero">
+        
+    </div>
+
+    <br>
+
+    <div class="nuevo-juego" onclick="generarTablero()">New Game</div>
+
+    <script>
+    
+        let iconos;
+
+        function cargarIcons() {
+        }
+
+        function generarTablero() {
+        cargarIconos();
+        let tablero = document.getElementById("tablero");
+        let tarjetas = [];
+        for (let i = 0; i < 24; i++) {
+            tarjetas.push(`
+            <div class="area-tarjeta">
+                <div class="tarjeta">
+                    <div class="cara trasera">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="cara superior">
+                        <i class="far fa-question-circle"></i>
+                    </div>
+                </div>
+            </div>
+            `)
+        }
+        tablero.innerHTML = tarjetas.join(" ");
+        }
+        
+    </script>
+</body>
+</html>
