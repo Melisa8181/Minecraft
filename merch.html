@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Shop</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/34ff504c78b84c92199500c8b2e0e57a.ico/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html"><img src="../img/580b57fcd9996e24bc43c2f5.png" alt="Minecraft Didactics"></a>
+        <div id="didactics">DIDACTICS</div>
+    </header>
+
+    <div class="shop-container">
+        <div class="shopopacity">
+
+        <div class="sp-container">
+            <div class="scart">Shopping cart</div>
+            <div class="border"></div>
+            <table class="table">
+                <thead>
+                <tr class="listpr">
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Total</th>
+                </tr>
+                </thead>
+                <tbody id="items"></tbody>
+            </table>
+            <div class="border"></div>
+            <table>
+                <tfoot>
+                    <tr id="footer-cart">
+                        <th scope="row" colspan="5">Empty cart - start shopping!</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="row" id="products-container"></div>
+        
+    </div>
+    </div>
+
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total:</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="empty-cart">
+                Empty all
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+    <template id="template-cart">
+        <tr id="itemcart">
+            <th scope="row">id</th>
+            <td>T-shirt</td>
+            <td>1</td>
+            <td>
+                <button class="btn btn-info btn-sm">
+                    +
+                </button>
+                <button class="btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td>$ <span>500</span></td>
+        </tr>
+    </template>
+
+    <template id="template-card">
+        <div class="col-12 mb-2">
+            <div class="card">
+            <div class="card-body">
+                <h5>Title</h5>
+                <p>Price</p>
+                <button class="btn">BUY</button>
+            </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="products-template">
+        <div class="col-12.col-md-4">
+            <div class="newcard">
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">T-shirt</h5>
+                    <p class="card-text">$ <span>500</span></p>
+                    <button class="btn">Buy</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <div id="followcontainer">
+        <div id="follow">FOLLOW AND CONTACT US!</div>
+        <div id="followicons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="../img/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="../img/instagram.png" alt=""></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="../img/twitter.png" alt=""></a>
+        </div>
+    </div>
+
+    <script src="merch.js"></script>
+</body>
+</html>

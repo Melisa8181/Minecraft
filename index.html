@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Didactics</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/34ff504c78b84c92199500c8b2e0e57a.ico/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -34,7 +35,7 @@
                 </div>
 
                 <div id="learncontainer">
-                    <a href="learnmore.html" id="learn"><img src="../img/Bookshelf.png">LEARN MORE</a>
+                    <a href="learnmore.html" id="learn"><img src="../img/bookshelf.png">LEARN MORE</a>
                 </div>
             </div>
         </div>
@@ -50,5 +51,24 @@
     </div>
 
     <script src="script.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCA-79z63wVS771N_NtlizaNV6F2Jkm6bY",
+            authDomain: "minecraft-72d0e.firebaseapp.com",
+            projectId: "minecraft-72d0e",
+            storageBucket: "minecraft-72d0e.appspot.com",
+            messagingSenderId: "1098668641582",
+            appId: "1:1098668641582:web:7017f60864775237a0bebf"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>

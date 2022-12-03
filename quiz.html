@@ -4,13 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memotest</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Quiz Game</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/34ff504c78b84c92199500c8b2e0e57a.ico/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="contquiz">
+        <div class="header">
+            <div class="category" id="category">
+                Category
+            </div>
+            <div class="question" id="question">
+                Question
+            </div>
+            <img src="" class="image" id="image">
+        </div>
+        <div class="btnopt" id="btn1" onclick="push_btn(0)">
+            Option 1
+        </div>
+        <div class="btnopt" id="btn2" onclick="push_btn(1)">
+            Option 2
+        </div>
+        <div class="btnopt" id="btn3" onclick="push_btn(2)">
+            Option 3
+        </div>
+        <div class="btnopt" id="btn4" onclick="push_btn(3)">
+            Option 4
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script>
+
+        let core_questions = readText("core_questions.json");
+        let interpreter_bp = JSON.parse(core_questions);
+        let question;
+        let possible_answers;
+        let correspond_btn = [
+            select_id("btn1"), select_id("btn2"),
+            select_id("btn3"), select_id("btn4")
+        ]
+
+        chooseRandomQuestion();
+
+        function chooseRandomQuestion() {
+            chooseQuestion(Math.floor(Math.random() * interpreter_bp.length))
+        }
+
+        function chooseQuestion(n) {
+            question = interpreter_bp[n];
+            select_id("category").innerHTML = question.category;
+            select_id("question").innerHTML = question.question;
+            
+            style("image").objectFit = question.objectFit;
+            scrambleAnswer(question);
+            
+            
+            if(question.image) {
+                select_id("image").setAttribute("src", question.image);
+                style("image").height = "200px";
+                style("image").width = "100%";
+            } else {
+                style("image").height = "0px";
+                style("image").width = "0px";
+            }
+        }
+
+        function scrambleAnswer(question) {
+            possible_answers = [
+                question.answer, 
+                question.incorrect1, 
+                question.incorrect2, 
+                question.incorrect3
+            ]
+            possible_answers.sort(() => Math.random()-0.5)
+
+            select_id("btn1").innerHTML = possible_answers[0];
+            select_id("btn2").innerHTML = possible_answers[1];
+            select_id("btn3").innerHTML = possible_answers[2];
+            select_id("btn4").innerHTML = possible_answers[3];
+        }
+
+        function push_btn(i) {
+            if(possible_answers[i] == question.answer){
+                correspond_btn[i].style.background = "lightgreen";
+            }else {
+                correspond_btn[i].style.background = "pink";
+            }
+            setTimeout(() => {
+                reset()
+            }, 3000);
+        }
+
+        function reset() {
+            for (const btn of correspond_btn) {
+                btn.style.background = "white"
+            }
+            chooseRandomQuestion();
+        }
+
+        function select_id(id) {
+            return document.getElementById(id);
+        }
+
+        function style(id) {
+            return select_id(id).style;
+        }
+
+        function readText(local_route) {
+            var text = null;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", local_route, false);
+            xmlhttp.send();
+            if (xmlhttp.status == 200) {
+                text = xmlhttp.responseText;
+            }
+            return text;
+        }
+    </script>
 </body>
 </html>
