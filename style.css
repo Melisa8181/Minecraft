@@ -27,7 +27,7 @@ header img {
 }
 
 #maincontainer{
-    background-image: url(../img/back.jpg);
+    background-image: url(./img/back.jpg);
     background-size: cover;
 }
 
@@ -165,7 +165,7 @@ a {
 #maingamescontainer {
     display: flex;
     flex-direction: column;
-    background-image: url(../img/ae576f9097bd63e79c571b4fab797785.png);
+    background-image: url(./img/ae576f9097bd63e79c571b4fab797785.png);
     background-size: cover;
     background-position: center;
 }
@@ -225,7 +225,7 @@ a {
     padding: 0;
     margin: 0;
     -webkit-perspective: 1000;
-    background-image: url(../img/minecraft-2193723.jpg);
+    background-image: url(./img/minecraft-2193723.jpg);
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -309,7 +309,7 @@ div {
 .container-ttt {
     text-align: center;
     display: inherit;
-    background-image: url(../img/eded1-16232581980257-800.jpg);
+    background-image: url(./img/eded1-16232581980257-800.jpg);
     background-size: 125% 100%;
     min-height: 100vh;
     user-select: none ;
@@ -375,7 +375,7 @@ body {
 }
 
 .contquiz {
-    background-image: url(../img/ebd201f08c6f13db9f7dd600b29c7a4c.jpg);
+    background-image: url(./img/ebd201f08c6f13db9f7dd600b29c7a4c.jpg);
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -429,7 +429,7 @@ body {
 .shop-container{
     display: flex;
     flex-direction: column;
-    background-image: url(../img/b636e6f827ad7727280dfb754d788058.jpg);
+    background-image: url(./img/b636e6f827ad7727280dfb754d788058.jpg);
     background-color: white;
     background-size: cover;
     background-position: center;
@@ -623,7 +623,7 @@ body {
         height: 250px;
     }
     .contquiz {
-        background-image: url(../img/Dlxp6XXW0AEscZK.jpg);
+        background-image: url(./img/Dlxp6XXW0AEscZK.jpg);
         background-size: cover;
     }
     .sp-container {
@@ -700,7 +700,7 @@ body {
         background-size: cover;
     }
     .contquiz {
-        background-image: url(../img/Dlxp6XXW0AEscZK.jpg);
+        background-image: url(./img/Dlxp6XXW0AEscZK.jpg);
         background-size:100% 100%;
     }
     .shop-container{
