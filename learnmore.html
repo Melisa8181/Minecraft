@@ -5,53 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn More</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/34ff504c78b84c92199500c8b2e0e57a.ico/favicon-16x16.png">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <!--<div id="headercontainer"></div>-->
-            <img src="./img/580b57fcd9996e24bc43c2f5.png" alt="Minecraft Didactics">
-            <div id="didactics">DIDACTICS</div>
-        <!--</div>-->
+        <a href="index.html"><img src="./img/580b57fcd9996e24bc43c2f5.png" alt="Minecraft Didactics"></a>
+        <div id="didactics">DIDACTICS</div>
     </header>
 
-<body>
-    <div id="learncontainer">
-        <div id="blockquestion">
-            <div class="villager"></div>
-            <h1>What is a Creeper?</h1>
-            <div class="steve"></div>
-            <div class="creeper" data-aos="fade-up">
-                <img src="./img/cards/creeper.png"
-            </div>
+    <section class="questions">
+        <div class="title">
+            <h2>General Questions</h2>
         </div>
+        <div class="section-center">
+            <div class="villagerq"></div>
+            <article class="block-question">
+                <div class="question-title">
+                    <p>What is a Creeper?</p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quia necessitatibus ad exercitationem amet explicabo, quibusdam ipsa praesentium impedit mollitia.
+                </div>
+            </article>
+            <div class="stevea"></div>
 
-        <div id="blockquestion">
-            <div class="villager"></div>
-            <h1>What is a Creeper?</h1>
-            <div class="steve"></div>
-            <div class="creeper" data-aos="fade-up">
-                <img src="./img/cards/creeper.png"
-            </div>
+            <article class="block-question">
+                <div class="question-title">
+                    <p>What are the Skeletons?</p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quia necessitatibus ad exercitationem amet explicabo, quibusdam ipsa praesentium impedit mollitia.</p>
+                </div>
+            </article>
+
+            <article class="block-question">
+                <div class="question-title">
+                    <p>What does a crafting table do?</p>
+                    <button type="button" class="question-btn">
+                        <span class="plus-icon">
+                            <i class="far fa-plus-square"></i>
+                        </span>
+                        <span class="minus-icon">
+                            <i class="far fa-minus-square"></i>
+                        </span>
+                    </button>
+                </div>
+                <div class="question-text">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quia necessitatibus ad exercitationem amet explicabo, quibusdam ipsa praesentium impedit mollitia.</p>
+                </div>
+            </article>
+
         </div>
+    </section>
 
-        <div id="blockquestion">
-            <div class="villager"></div>
-            <h1>What is a Creeper?</h1>
-            <div class="steve"></div>
-            <div class="creeper" data-aos="fade-up">
-                <img src="./img/cards/creeper.png"
-            </div>
-        </div>
-    </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    
+    <script src="learnmore.js"></script>
 </body>
 </html>
