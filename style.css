@@ -531,44 +531,85 @@ body {
 
 /*//////////////////////////LEARN MORE//////////////////////////*/
 
-.learncontainer {
-    width: 90%;
-	max-width: 1200px;
-	margin: 100px auto;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-.learncontainer::after {
-    content: "";
-    width: 2px;
-    height: 100%;
-    background: #1b3231;
-    position: absolute;
-    top: 0;
-    left: calc(50% - 1px);
-    z-index: 1;
-}
-
-.blockquestion {
+.questions {
+    margin: 20px;
     display: flex;
-	justify-content: space-between;
-	margin-bottom: 200px;
-	position: relative;
+    flex-direction: column;
 }
 
-.blockquestion::after {
+h2 {
+    margin: 25px;
+}
+
+.section-center {
+    display: flex;
+    flex-direction: column;
+}
+
+/*.villagerq {
+    background-image: url(../img/villagerq.png);
+    height: 50px;
+    width: 100%;
+}*/
+
+.block-question {
+    margin:40px 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #4CAF50;
+    border-radius: 3%;
+    background-color:rgba(240, 230, 140, 0.699);
+}
+
+.question-title {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.question-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0px;
+    background-color:transparent;
+    color: orange;
+}
+
+.question-text {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    display: none;
+    padding: 20px;
+}
+
+.show-text .question-text {
+    display: block;
+}
+
+.question-text::before {
     content: "";
+    display: block; 
 	display: block;
-	width: 14px;
-	height: 14px;
-	border-radius: 100px;
-	background: #DCDFD9;
-	border: 2px solid #1b3231;
-	position: absolute;
-	z-index: 2;
-	top: calc(50% - 9px);
-	left: calc(50% - 9px);
+    display: block; 
+    margin: 20px auto;
+    width: 95%; 
+    border: 1px solid orange;
+}
+
+
+.minus-icon {
+    display: none;
+}
+
+.show-text .minus-icon {
+    display: inline;
+}
+
+.show-text .plus-icon {
+    display: none;
 }
 
 /*//////////////////////////MEDIA//////////////////////////*/
