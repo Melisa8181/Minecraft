@@ -1,8 +1,9 @@
 const questions = document.querySelectorAll(".block-question");
 
 questions.forEach(function (question) {
-    const btn = question.querySelector(".question-btn");
-    btn.addEventListener("click", function () {
+    const titleContainer = question.querySelector(".question-title");
+    
+    titleContainer.addEventListener("click", function () {
         questions.forEach(function (item) {
             if (item !== question) {
                 item.classList.remove("show-text");
