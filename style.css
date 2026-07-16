@@ -555,7 +555,7 @@ h2 {
 .section-center {
     display: flex;
     flex-direction: column;
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     width: 100%;
 }
@@ -567,7 +567,8 @@ h2 {
     flex-direction: column;
     border: 4px solid #4CAF50;
     border-radius: 0px;
-    background-color: rgba(40, 40, 40, 0.85);
+    background-color: rgba(30, 30, 30, 0.9);
+	box-shadow: 4px 4px 0px #000000;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -587,9 +588,9 @@ h2 {
 
 .question-title h4 {
     font-size: 20px;
-    color: #dacdcb;
+    color: #ffffff;
     --stroke-color: #000000;
-    --stroke-width: 1.5px;
+    --stroke-width: 2px;
     text-shadow: var(--stroke-width) 0 0 var(--stroke-color),
                  calc(var(--stroke-width) * -1) 0 0 var(--stroke-color),
                  0 var(--stroke-width) 0 var(--stroke-color),
@@ -614,24 +615,43 @@ h2 {
 
 .question-text {
     display: none;
-    flex-direction: column;
-    text-align: start;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 15px 10px 5px;
-    color: #aea4a2;
-    font-size: 18px;
-    line-height: 1.5;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 .show-text .question-text {
-    display: block;
+    display: flex;
+}
+
+.question-text p {
+    flex: 1;
+    min-width: 250px;
+    color: #dacdcb;
+    font-size: 18px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+.question-text img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    border: 3px solid #4CAF50;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
 }
 
 .question-text::before {
     content: "";
-    display: block; 
-    margin: 10px auto 20px;
+    display: block;
     width: 100%; 
-    border-bottom: 3px dashed orange;
+    border-bottom: 4px dashed orange;
+	margin-bottom: 15px;
+    order: -1;
 }
 
 .minus-icon {
@@ -651,6 +671,13 @@ h2 {
     height: 50px;
     width: 100%;
 }*/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .block-question {
+        margin: 20px;
+        padding: 20px;
+    }
+}
 
 /*//////////////////////////MEDIA//////////////////////////*/
 
